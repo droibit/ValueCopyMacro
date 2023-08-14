@@ -5,7 +5,8 @@ disabled_rules:
   - force_cast
   - force_try
   - force_unwrapping
-  - prohibited_interface_builder    
+  - prohibited_interface_builder
+  - blanket_disable_command
   # Prefer SwiftFormat
   - opening_brace
   - trailing_comma
@@ -19,6 +20,7 @@ disabled_rules:
   - multiline_parameters
   - multiline_parameters_brackets
   - switch_case_on_newline
+  - switch_case_alignment
 opt_in_rules:
   - anonymous_argument_in_multiline_closure
   - array_init
