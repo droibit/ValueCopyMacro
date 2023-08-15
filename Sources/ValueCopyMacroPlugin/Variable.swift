@@ -68,8 +68,8 @@ extension IintializerParameter {
 
 extension IintializerParameter {
     init?(_ syntax: FunctionParameterSyntax) {
-        let label: Label?,
-            name: String
+        let label: Label?
+        let name: String
         if let secondName = syntax.secondName {
             switch syntax.firstName.tokenKind {
             case let .identifier(id):

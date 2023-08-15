@@ -1,5 +1,3 @@
-// swiftlint:disable function_body_length
-
 import Foundation
 import SwiftDiagnostics
 import SwiftSyntaxMacros

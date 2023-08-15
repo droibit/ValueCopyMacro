@@ -52,7 +52,7 @@ public struct ValueCopyMacro: MemberMacro {
         }
 
         let copyFunc = try FunctionDeclSyntax(
-            "\(raw: args.accessControl)func copy(\n\(raw: copyParams.joined(separator: ",\n"))\n) -> Self"
+            "\(raw: args.accessLevel)func copy(\n\(raw: copyParams.joined(separator: ",\n"))\n) -> Self"
         ) {
             """
             .init(

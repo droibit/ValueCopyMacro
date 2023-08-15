@@ -3,7 +3,7 @@ import SwiftSyntax
 struct Arguments {
     let `public`: Bool
 
-    var accessControl: String {
+    var accessLevel: String {
         `public` ? "public " : ""
     }
 }
