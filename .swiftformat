@@ -1,5 +1,5 @@
 # file options
---exclude Carthage,Pods,Sources/Mocks,.swiftpm
+--exclude Carthage,Pods,.swiftpm
 
 # format options
 --allman false

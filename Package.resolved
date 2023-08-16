@@ -5,14 +5,6 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-syntax.git",
       "state" : {
-    },
-    {
-      "identity" : "swiftformat",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/nicklockwood/SwiftFormat.git",
-      "state" : {
-        "revision" : "507d63f6e890621f055397c9503bfc9468e8bcb6",
-        "version" : "0.51.15"
         "revision" : "2e3c42cf38defd998c87ecfe8df138f925d22736",
         "version" : "509.0.0-swift-DEVELOPMENT-SNAPSHOT-2023-08-15-a"
       }
