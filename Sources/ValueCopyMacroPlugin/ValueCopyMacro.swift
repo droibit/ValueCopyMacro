@@ -17,7 +17,7 @@ public struct ValueCopyMacro: MemberMacro {
             context.diagnose(error)
             return []
         }
-        let args = if case let .argumentList(arguments) = node.argument {
+        let args = if case let .argumentList(arguments) = node.arguments {
             Arguments(arguments)
         } else {
             Arguments(public: false)
@@ -36,7 +36,7 @@ public struct ValueCopyMacro: MemberMacro {
             callArgs = storedProps.map { $0.toCallArgument() }
         } else {
             guard let memberwiseInitParams = initializerDecls
-                .compactMap({ $0.obtain(with: storedProps) })
+                .compactMap({ $0.obtainMemberwiseInitializer(with: storedProps) })
                 .first,
                 !memberwiseInitParams.isEmpty
             else {
@@ -67,10 +67,10 @@ public struct ValueCopyMacro: MemberMacro {
 // MARK: - Utils
 
 private extension InitializerDeclSyntax {
-    func obtain(with storedProperties: [Variable]) -> [IintializerParameter] {
+    func obtainMemberwiseInitializer(with storedProperties: [Variable]) -> [IintializerParameter] {
         guard let function = signature.as(FunctionSignatureSyntax.self),
-              let input = function.input.as(ParameterClauseSyntax.self),
-              let srcParameters = input.parameterList.as(FunctionParameterListSyntax.self)
+              let input = function.parameterClause.as(FunctionParameterClauseSyntax.self),
+              let srcParameters = input.parameters.as(FunctionParameterListSyntax.self)
         else {
             return []
         }

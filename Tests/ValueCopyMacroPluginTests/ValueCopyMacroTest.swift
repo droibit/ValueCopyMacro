@@ -28,6 +28,7 @@ final class ValueCopyMacroTest: XCTestCase {
                 let value2: Int?
                 let value3: [Double]
                 let value4: [String: Double]?
+
                 func copy(
                     value1: String? = nil,
                     value2: Int?? = nil,
@@ -71,6 +72,7 @@ final class ValueCopyMacroTest: XCTestCase {
                 var value6: String {
                     "test"
                 }
+
                 public func copy(
                     value2: Int?? = nil,
                     value3: String? = nil,
@@ -118,6 +120,7 @@ final class ValueCopyMacroTest: XCTestCase {
                     self.value2 = value2
                     self.value3 = value3
                 }
+
                 func copy(
                     value1: String? = nil,
                     value2: Int?? = nil,
@@ -167,6 +170,7 @@ final class ValueCopyMacroTest: XCTestCase {
                     self.value1 = test.value1
                     self.value2 = test.value2
                 }
+
                 public func copy(
                     value1: String? = nil,
                     value2: Int?? = nil

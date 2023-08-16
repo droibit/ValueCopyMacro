@@ -11,7 +11,7 @@ let package = Package(
         .tvOS(.v13),
         .watchOS(.v6),
         .macCatalyst(.v13),
-    ],    
+    ],
     products: [
         .library(
             name: "ValueCopyMacro",
@@ -21,15 +21,14 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/apple/swift-syntax.git",
-            exact: "509.0.0-swift-DEVELOPMENT-SNAPSHOT-2023-07-04-a"
+            from: "509.0.0-swift-DEVELOPMENT-SNAPSHOT-2023-08-15-a"
         ),
-        .package(url: "https://github.com/nicklockwood/SwiftFormat.git", exact: "0.51.15")
-    ],    
+    ],
     targets: [
         .target(
             name: "ValueCopyMacro",
             dependencies: [
-                "ValueCopyMacroPlugin"
+                "ValueCopyMacroPlugin",
             ]
         ),
         .macro(

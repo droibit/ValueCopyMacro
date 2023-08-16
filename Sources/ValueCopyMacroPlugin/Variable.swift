@@ -22,11 +22,11 @@ extension Variable {
         else {
             return nil
         }
-        guard binding.accessor == nil else {
+        guard binding.accessorBlock == nil else {
             return nil
         }
 
-        if decl.bindingKeyword.tokenKind == .keyword(.let),
+        if decl.bindingSpecifier.tokenKind == .keyword(.let),
            binding.initializer != nil
         {
             return nil
