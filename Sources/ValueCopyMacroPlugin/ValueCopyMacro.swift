@@ -67,7 +67,7 @@ public struct ValueCopyMacro: MemberMacro {
 // MARK: - Utils
 
 private extension InitializerDeclSyntax {
-    func obtainMemberwiseInitializer(with storedProperties: [Variable]) -> [IintializerParameter] {
+    func obtainMemberwiseInitializer(with storedProperties: [Variable]) -> [InitializerParameter] {
         guard let function = signature.as(FunctionSignatureSyntax.self),
               let input = function.parameterClause.as(FunctionParameterClauseSyntax.self),
               let srcParameters = input.parameters.as(FunctionParameterListSyntax.self)
@@ -77,7 +77,7 @@ private extension InitializerDeclSyntax {
 
         let destParameters = srcParameters
             .compactMap { $0.as(FunctionParameterSyntax.self) }
-            .compactMap { IintializerParameter($0) }
+            .compactMap { InitializerParameter($0) }
             .filter { parameter in
                 storedProperties.contains { $0 == parameter.variable }
             }

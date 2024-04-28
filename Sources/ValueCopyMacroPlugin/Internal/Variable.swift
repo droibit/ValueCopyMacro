@@ -38,7 +38,7 @@ extension Variable {
     }
 }
 
-struct IintializerParameter {
+struct InitializerParameter {
     let label: Label?
     let variable: Variable
 
@@ -59,14 +59,14 @@ struct IintializerParameter {
     }
 }
 
-extension IintializerParameter {
+extension InitializerParameter {
     enum Label {
         case wildcard
         case identifier(String)
     }
 }
 
-extension IintializerParameter {
+extension InitializerParameter {
     init?(_ syntax: FunctionParameterSyntax) {
         let label: Label?
         let name: String
