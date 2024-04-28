@@ -10,7 +10,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/droibit/ValueCopyMacro", 
-            exact: "0.0.1"
+            exact: "0.0.2"
         ),
         // ...
     ],
